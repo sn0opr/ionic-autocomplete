@@ -1,4 +1,4 @@
-ionc-autocomplete
+ionic-autocomplete
 =================
 
 Directive for text input autocomplete for Ionic framework
