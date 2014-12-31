@@ -3,7 +3,7 @@ angular.module('autocomplete.directive', [])
 .directive('ioncAutocomplete',
     function ($ionicPopover) {
         var popoverTemplate = [
-         '<ion-popover-view>',
+         '<ion-popover-view style="margin-top:5px">',
              '<ion-content>',
                  '<div class="list">',
                     '<a href="#" class="item" ng-repeat="item in items | filter:inputSearch" ng-click="selectItem(item)">{{item.display}}</a>',

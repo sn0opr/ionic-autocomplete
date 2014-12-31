@@ -1,7 +1,22 @@
 {
-  "name": "HelloIonic",
-  "private": "true",
-  "devDependencies": {
-    "ionic": "driftyco/ionic-bower#1.0.0-beta.14"
-  }
+    "name": "Ionic Autocomplete Directive",
+    "version": "1.0.0",
+    "authors": [
+    "Ala RIHANE <rihane.alaa@gmail.com>"
+],
+    "description": "AngularJS directive for text input autocomplete for Ionic Framework",
+    "main": [
+    "lib/autocomplete/autocomplete.directive.js"
+],
+    "keywords": [
+    "ionic",
+    "autocomplete",
+    "text",
+    "input",
+    "mobile",
+    "html5"
+],
+    "license": "MIT",
+    "homepage": "https://github.com/sn0opr/ionic-autocomplete",
+    "private": false
 }
