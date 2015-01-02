@@ -21,18 +21,18 @@ angular.module('starter', ['ionic', 'autocomplete.directive'])
 })
 
 .controller('MainCtrl', function ($scope) {
-        $scope.items = [
-            {display: 'Hello'},
-            {display: 'Baha'},
-            {display: 'Ala'},
-            {display: 'Siwar'},
-            {display: 'Monira'},
-            {display: 'Samir'},
-            {display: 'Spange Bob'},
-            {display: 'Deneris Targariant'},
-            {display: 'Ned Stark'}
-        ]
-        $scope.onSelect = function (item) {
-            console.log('item', item);
-        }
-    })
+    $scope.items = [
+        {display: 'Hello'},
+        {display: 'Baha'},
+        {display: 'Ala'},
+        {display: 'Siwar'},
+        {display: 'Monira'},
+        {display: 'Samir'},
+        {display: 'Spange Bob'},
+        {display: 'Deneris Targariant'},
+        {display: 'Ned Stark'}
+    ];
+    $scope.onSelect = function (item) {
+        console.log('item', item);
+    };
+});

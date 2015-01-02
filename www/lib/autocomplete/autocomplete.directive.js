@@ -1,20 +1,19 @@
 angular.module('autocomplete.directive', [])
 
-.directive('ioncAutocomplete',
+.directive('ionicAutocomplete',
     function ($ionicPopover) {
-        var popoverTemplate = [
-         '<ion-popover-view style="margin-top:5px">',
-             '<ion-content>',
-                 '<div class="list">',
-                    '<a href="#" class="item" ng-repeat="item in items | filter:inputSearch" ng-click="selectItem(item)">{{item.display}}</a>',
-                 '</div>',
-             '</ion-content>',
-         '</ion-popover-view>'
-         ].join('');
+        var popoverTemplate = 
+         '<ion-popover-view style="margin-top:5px">' + 
+             '<ion-content>' +
+                 '<div class="list">' +
+                    '<a href="#" class="item" ng-repeat="item in items | filter:inputSearch" ng-click="selectItem(item)">{{item.display}}</a>' +
+                 '</div>' +
+             '</ion-content>' +
+         '</ion-popover-view>';
         return {
             restrict: 'A',
             scope: {
-                params: '=ioncAutocomplete',
+                params: '=ionicAutocomplete',
                 inputSearch: '=ngModel'
             },
             link: function ($scope, $element, $attrs) {
@@ -33,14 +32,14 @@ angular.module('autocomplete.directive', [])
                     if (!popoverShown) {
                         popover.show(e);
                     }
-                })
+                });
 
                 $scope.selectItem = function (item) {
                     $element.val(item.display);
                     popover.hide();
                     $scope.params.onSelect(item);
-                }
+                };
             }
-        }
+        };
     }
-)
+);
