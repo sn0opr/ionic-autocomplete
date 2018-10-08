@@ -1,7 +1,7 @@
 angular.module('autocomplete.directive', [])
 
 .directive('ionicAutocomplete',
-    function ($ionicPopover) {
+    function ($ionicPopover,$timeout) {
         var popoverTemplate = 
          '<ion-popover-view style="margin-top:5px">' + 
              '<ion-content>' +
@@ -29,9 +29,12 @@ angular.module('autocomplete.directive', [])
                     scope: $scope
                 });
                 $element.on('focus', function (e) {
+                  $timeout(function() {
                     if (!popoverShown) {
-                        popover.show(e);
+                      popover.show(e);
                     }
+                  }, 1);
+
                 });
 
                 $scope.selectItem = function (item) {
